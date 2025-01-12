@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of London Projekt</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #001f3f; /* Helles Beige */
+            color: #001f3f; /* Dunkelblau */
+        }
+        header {
+            background: color: #f4e7d3;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            color: #f4e7d3;
+            cursor: pointer;
+        }
+        header h2 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #f4e7d3; /* Weiches Beige */
+        }
+        .images-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .images-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .info-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+        .info-box {
+            background: #cfc2af; /* Sanftes Beige */
+            border: 1px solid #e0d1bd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 48%;
+        }
+        .info-box h3 {
+            margin-top: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #001f3f;
+        }
+        .info-box p {
+            font-size: 1rem;
+            color: #333;
+        }
+        #toggle-view {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #001f3f;
+            color: #f4e7d3;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header h2 {
+                font-size: 1rem;
+            }
+            .info-boxes {
+                flex-direction: column;
+            }
+            .info-box {
+                flex: 1 1 100%;
+            }
+        }
+        .mobile-view .images-container,
+        .mobile-view .info-boxes {
+            display: block;
+            padding: 10px;
+        }
+        .mobile-view .info-box {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 onclick="goToHomePage()">Tower of London</h1>
+        <h2>von</h2>
+        <h2>Sarah Engl, Jule Hausen, Marleen Triebel, Mia Yuneman</h2>
+    </header>
+
+    <div class="images-container">
+        <img src="https://th.bing.com/th/id/OIP.sx1NL0hcQeEP6qtxwSKnUwHaFI?rs1&pid=ImgDetMain" alt="Karte">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.1DcHDkiq0-OUb4TfbNl7FwHaHa&pid=Api" alt="Rabe im Tower of London">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.DRf6CRG9_k8CdSTF1g3dMAHaFj&pid=Api" alt="Die Raben im Tower of London">
+    </div>
+   
+
+    <div class="info-boxes">
+        <div class="info-box">
+            <h3>Tower of London</h3>
+            <p>
+                Der Tower of London ist ein historisches Wahrzeichen, das von einer Gruppe traditioneller Wächter, den Beefeaters, geschützt wird. Ursprünglich diente der Tower nicht nur als Festung, sondern auch als Gefängniss und. Die berühmte Schatzkammer im Tower, in der die britischen Kronjuwelen aufbewahrt werden, wird Jewel House genannt. Der letzte bekannte Gefangene, der im Tower hingerichtet wurde, war der Spion Josef Jakobs im Jahr 1941. Der Tower wurde im Jahr 1078 von Wilhelm dem Eroberer errichtet. Ein weiteres interessantes Merkmal sind die Raben, die mit dem Tower in Verbindung gebracht werden. Der Legende nach soll der Turm und das Königreich fallen, wenn die Raben jemals den Tower verlassen.
+            </p>
+        </div>
+        <div class="info-box">
+            <h3>Die 6 Raben</h3>
+            <p>
+                Der Tower of London ist ein historisches Wahrzeichen, das von einer Gruppe traditioneller Wächter, den Beefeaters, geschützt wird. Ursprünglich diente der Tower nicht nur als Festung, sondern auch als königlicher Palast, Gefängnis und Hinrichtungsstätte. Die berühmte Schatzkammer im Tower, in der die britischen Kronjuwelen aufbewahrt werden, wird Jewel House genannt. Der letzte bekannte Gefangene, der im Tower hingerichtet wurde, war der Spion Josef Jakobs im Jahr 1941. Der Tower wurde im Jahr 1078 von Wilhelm dem Eroberer errichtet. Ein weiteres interessantes Merkmal sind die Raben, die mit dem Tower in Verbindung gebracht werden. Der Legende nach soll der Turm und das Königreich fallen, wenn die Raben jemals den Tower verlassen.
+            </p>
+        </div>
+    </div>
+
+    <button id="toggle-view">Wechsel zu Handy-Ansicht</button>
+
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html";
+        }
+
+        const button = document.getElementById('toggle-view');
+        button.addEventListener('click', function () {
+            const body = document.body;
+            body.classList.toggle('mobile-view');
+            button.textContent = body.classList.contains('mobile-view')
+                ? 'Wechsel zu Laptop-Ansicht'
+                : 'Wechsel zu Handy-Ansicht';
+        });
+    </script>
+</body>
+</html>
